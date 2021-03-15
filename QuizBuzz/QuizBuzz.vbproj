@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BD35A1C-61C6-4DB4-AF7B-2EB20846F641}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>QuizBuzz.My.MyApplication</StartupObject>
+    <RootNamespace>QuizBuzz</RootNamespace>
+    <AssemblyName>QuizBuzz</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>QuizBuzz.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>QuizBuzz.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF5, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Data.Entity.EF5.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Fabric.Plugin, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Fabric.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="FrmCandidateReport.Designer.vb">
+      <DependentUpon>FrmCandidateReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCandidateReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditCandidate.Designer.vb">
+      <DependentUpon>FrmEditCandidate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditCandidate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditQuizDate.Designer.vb">
+      <DependentUpon>FrmEditQuizDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditQuizDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditQuizMaster.Designer.vb">
+      <DependentUpon>FrmEditQuizMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditQuizMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditSubject.Designer.vb">
+      <DependentUpon>FrmEditSubject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditSubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditTeam.Designer.vb">
+      <DependentUpon>FrmEditTeam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditTeam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExpertReport.Designer.vb">
+      <DependentUpon>FrmExpertReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExpertReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogIn.Designer.vb">
+      <DependentUpon>FrmLogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginQuizTest.Designer.vb">
+      <DependentUpon>FrmLoginQuizTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginQuizTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewExpert.Designer.vb">
+      <DependentUpon>frmNewExpert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewExpert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.vb">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewCandidate.Designer.vb">
+      <DependentUpon>frmNewCandidate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewCandidate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditExpert.Designer.vb">
+      <DependentUpon>frmEditExpert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditExpert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewQuestion.Designer.vb">
+      <DependentUpon>frmNewQuestion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewQuestion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewQuizMaster.Designer.vb">
+      <DependentUpon>FrmNewQuizMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNewQuizMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditQuestion.Designer.vb">
+      <DependentUpon>frmEditQuestion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditQuestion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuestionReport.Designer.vb">
+      <DependentUpon>FrmQuestionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuestionReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewQuizDate.Designer.vb">
+      <DependentUpon>frmNewQuizDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewQuizDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuizBuzz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuizBuzz.Designer.vb">
+      <DependentUpon>frmQuizBuzz.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuizDateReport.Designer.vb">
+      <DependentUpon>FrmQuizDateReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuizDateReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuizMasterReport.Designer.vb">
+      <DependentUpon>FrmQuizMasterReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuizMasterReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuizTest.Designer.vb">
+      <DependentUpon>frmQuizTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuizTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewTeam.Designer.vb">
+      <DependentUpon>frmNewTeam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewTeam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddSubject.Designer.vb">
+      <DependentUpon>FrmAddSubject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddSubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSplashScreen.Designer.vb">
+      <DependentUpon>FrmSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTeamReport.Designer.vb">
+      <DependentUpon>FrmTeamReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTeamReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreatePassWord.Designer.vb">
+      <DependentUpon>frmCreatePassWord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreatePassWord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmCandidateReport.resx">
+      <DependentUpon>FrmCandidateReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditCandidate.resx">
+      <DependentUpon>FrmEditCandidate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditQuizDate.resx">
+      <DependentUpon>FrmEditQuizDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditQuizMaster.resx">
+      <DependentUpon>FrmEditQuizMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditSubject.resx">
+      <DependentUpon>FrmEditSubject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditTeam.resx">
+      <DependentUpon>FrmEditTeam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExpertReport.resx">
+      <DependentUpon>FrmExpertReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogIn.resx">
+      <DependentUpon>FrmLogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginQuizTest.resx">
+      <DependentUpon>FrmLoginQuizTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewExpert.resx">
+      <DependentUpon>frmNewExpert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewCandidate.resx">
+      <DependentUpon>frmNewCandidate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditExpert.resx">
+      <DependentUpon>frmEditExpert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewQuestion.resx">
+      <DependentUpon>frmNewQuestion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewQuizMaster.resx">
+      <DependentUpon>FrmNewQuizMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditQuestion.resx">
+      <DependentUpon>frmEditQuestion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuestionReport.resx">
+      <DependentUpon>FrmQuestionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewQuizDate.resx">
+      <DependentUpon>frmNewQuizDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuizBuzz.resx">
+      <DependentUpon>frmQuizBuzz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuizDateReport.resx">
+      <DependentUpon>FrmQuizDateReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuizMasterReport.resx">
+      <DependentUpon>FrmQuizMasterReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuizTest.resx">
+      <DependentUpon>frmQuizTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewTeam.resx">
+      <DependentUpon>frmNewTeam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddSubject.resx">
+      <DependentUpon>FrmAddSubject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplashScreen.resx">
+      <DependentUpon>FrmSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTeamReport.resx">
+      <DependentUpon>FrmTeamReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreatePassWord.resx">
+      <DependentUpon>frmCreatePassWord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\love_6_teaser.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %2821%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
